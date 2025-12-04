@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "author": "Wokwi Simulator",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ili9341",
+      "id": "lcd1",
+      "top": -180,
+      "left": 200,
+      "attrs": {
+        "width": "320",
+        "height": "240"
+      }
+    }
+  ],
+  "connections": [
+    [ "esp:GND.1", "lcd1:GND", "black", [ "h0" ] ],
+    [ "esp:3V3", "lcd1:VCC", "red", [ "h0" ] ],
+    [ "esp:D15", "lcd1:CS", "green", [ "h0" ] ],
+    [ "esp:D2", "lcd1:DC", "blue", [ "h0" ] ],
+    [ "esp:D14", "lcd1:SCK", "yellow", [ "h0" ] ],
+    [ "esp:D13", "lcd1:MOSI", "orange", [ "h0" ] ],
+    [ "esp:D12", "lcd1:MISO", "purple", [ "h0" ] ],
+    [ "esp:D27", "lcd1:LED", "white", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
